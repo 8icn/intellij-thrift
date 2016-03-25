@@ -783,7 +783,7 @@ public class ThriftParser implements PsiParser {
 
   /* ********************************************************** */
   // Multiply | 'cpp' | 'java' | 'py' | 'py.twisted' | 'perl' | 'rb' | 'js' | 'st' |
-  //                      'cocoa' | 'csharp' | 'c_glib' | 'go' | 'php' | 'delphi'
+  //                      'cocoa' | 'csharp' | 'c_glib' | 'go' | 'php' | 'nova' | 'delphi'
   public static boolean NamespaceScope(PsiBuilder b, int l) {
     if (!recursion_guard_(b, l, "NamespaceScope")) return false;
     boolean r;
@@ -802,6 +802,7 @@ public class ThriftParser implements PsiParser {
     if (!r) r = consumeToken(b, "c_glib");
     if (!r) r = consumeToken(b, "go");
     if (!r) r = consumeToken(b, "php");
+    if (!r) r = consumeToken(b, "nova");
     if (!r) r = consumeToken(b, "delphi");
     exit_section_(b, l, m, NAMESPACE_SCOPE, r, false, null);
     return r;
