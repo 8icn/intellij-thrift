@@ -5,6 +5,8 @@ forked from [fkorotkov/intellij-thrift](https://github.com/fkorotkov/intellij-th
 The difference is to add recognition of our own namespace nova.
 
 ## How to build
+**You need to use the Community Edition IntelliJ to build plugin.**
+
 * Invalidate output: Build -> Rebuild Project 
 * zip $PROJECT_ROOT/out/artifacts/thrift folder
 * share the zip file
